@@ -1,0 +1,182 @@
+
+# version
+# Betaflight / STM32F722 (F722) 2026.6.1 Aug  3 2026 / 11:23:57 (6dbc4218f) MSP API: 1.48
+# config rev: 749fff1
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name IFLIGHT_BLITZ_F722
+manufacturer_id IFRC
+mcu_id 002f002d3135510f32323635
+signature 
+
+# name: Kev
+
+# resources
+resource PINIO 1 C00
+
+# feature
+feature TELEMETRY
+feature LED_STRIP
+feature OSD
+
+# serial
+serial UART1 131073 115200 57600 0 115200
+serial UART2 64 115200 57600 0 115200
+
+# led
+led 0 0,0::C:6
+led 1 1,0::C:6
+led 2 2,0::C:6
+led 3 3,0::C:6
+led 4 4,0::C:6
+led 5 5,0::C:6
+led 6 6,0::CB:6
+led 7 7,0::C:6
+led 8 8,0::C:6
+led 9 9,0::L:6
+led 10 10,0::L:6
+led 11 11,0::L:6
+led 12 12,0::C:6
+led 13 13,0::C:6
+led 14 14,0::C:6
+
+# aux
+aux 0 0 0 1950 2050 0 0
+aux 1 1 1 1950 2050 0 0
+aux 2 2 1 1450 1550 0 0
+aux 3 13 3 1450 2025 0 0
+aux 4 35 3 1950 2050 0 0
+aux 5 36 5 1950 2050 0 0
+aux 6 40 4 950 1050 0 0
+
+# adjrange
+adjrange 0 0 2 900 1100 12 2 0 0
+adjrange 1 0 2 1425 1600 12 2 0 0
+adjrange 2 0 2 1925 2100 12 2 0 0
+adjrange 3 0 6 900 1100 29 6 0 0
+adjrange 4 0 6 1425 1625 29 6 0 0
+adjrange 5 0 6 1900 2100 29 6 0 0
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 0
+set dyn_notch_count = 1
+set dyn_notch_q = 400
+set dyn_notch_min_hz = 90
+set dyn_notch_max_hz = 400
+set gyro_lpf1_dyn_min_hz = 0
+set acc_calibration = -2,5,33,1
+set dshot_bidir = ON
+set small_angle = 180
+set simplified_gyro_filter_multiplier = 150
+set ledstrip_visual_beeper_color = RED
+set osd_units = BRITISH
+set osd_warn_bitmask = 294911
+set osd_rssi_dbm_alarm = -105
+set osd_vbat_pos = 6688
+set osd_link_quality_pos = 7182
+set osd_rssi_dbm_pos = 3120
+set osd_flymode_pos = 6144
+set osd_anti_gravity_pos = 2304
+set osd_g_force_pos = 7249
+set osd_ah_sbar_pos = 4409
+set osd_ah_pos = 4281
+set osd_current_pos = 6752
+set osd_craft_name_pos = 6776
+set osd_altitude_pos = 2336
+set osd_warnings_pos = 14708
+set osd_avg_cell_voltage_pos = 6720
+set osd_disarmed_pos = 6486
+set osd_esc_tmp_pos = 512
+set osd_rtc_date_time_pos = 2065
+set osd_core_temp_pos = 2528
+set osd_rate_profile_name_pos = 6176
+set osd_battery_profile_name_pos = 6208
+set osd_stat_bitmask = 30508
+set pinio_box = 40,41,255,255
+set rpm_filter_weights = 90,30,90
+set rpm_filter_q = 800
+set rpm_filter_fade_range_hz = 100
+set craft_name = Kev
+set box_user_1_name = VTX_ON_OFF
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rateprofile_name = Aggress
+set roll_rc_rate = 13
+set pitch_rc_rate = 13
+set yaw_rc_rate = 13
+set roll_expo = 70
+set pitch_expo = 70
+set yaw_expo = 70
+set roll_srate = 130
+set pitch_srate = 130
+set yaw_srate = 130
+
+rateprofile 1
+
+# rateprofile 1
+set rateprofile_name = F/Style
+set roll_rc_rate = 10
+set pitch_rc_rate = 10
+set yaw_rc_rate = 10
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 55
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 80
+
+rateprofile 2
+
+# rateprofile 2
+set rateprofile_name = Default
+
+rateprofile 3
+
+# rateprofile 3
+set rateprofile_name = F/Style
+set roll_rc_rate = 10
+set pitch_rc_rate = 10
+set yaw_rc_rate = 10
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 55
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 80
+
+battery_profile 0
+
+# battery_profile 0
+set battery_profile_name = LiPo
+
+battery_profile 1
+
+battery_profile 2
+
+# restore original rateprofile selection
+rateprofile 0
+
+# restore original battery_profile selection
+battery_profile 0
+
+# save configuration
+save
