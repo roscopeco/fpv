@@ -1,0 +1,1602 @@
+semver: 2.12.0
+header: 
+   name: "F3K"
+   bitmap: ""
+   labels: ""
+timers: 
+   0:
+      start: 0
+      swtch: "L16"
+      value: 0
+      mode: ON
+      countdownBeep: 0
+      minuteBeep: 0
+      persistent: 0
+      countdownStart: -1
+      showElapsed: 0
+      extraHaptic: 0
+      name: "Flight"
+   1:
+      start: 0
+      swtch: "L15"
+      value: 0
+      mode: ON
+      countdownBeep: 0
+      minuteBeep: 0
+      persistent: 0
+      countdownStart: -1
+      showElapsed: 0
+      extraHaptic: 0
+      name: "Window"
+telemetryProtocol: 0
+thrTrim: 0
+noGlobalFunctions: 0
+displayTrims: 2
+ignoreSensorIds: 0
+trimInc: 0
+disableThrottleWarning: 1
+displayChecklist: 0
+extendedLimits: 1
+extendedTrims: 0
+throttleReversed: 0
+enableCustomThrottleWarning: 0
+disableTelemetryWarning: 0
+showInstanceIds: 0
+checklistInteractive: 0
+customThrottleWarningPosition: 0
+beepANACenter: 0
+mixData: 
+ -
+   destCh: 0
+   srcRaw: "I0"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 0
+   srcRaw: "I2"
+   carryTrim: 1
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: "gv(2)"
+   offset: 0
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "AilRud"
+ -
+   destCh: 1
+   srcRaw: "I1"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 1
+   srcRaw: "ch(24)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: "!gv(4)"
+   offset: "gv(4)"
+   swtch: "NONE"
+   curve: 
+      type: 3
+      value: 3
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "BrkEle"
+ -
+   destCh: 2
+   srcRaw: "I2"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: "gv(0)"
+   offset: 0
+   swtch: "!L13"
+   curve: 
+      type: 0
+      value: "!gv(3)"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 2
+   srcRaw: "ch(31)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: -100
+   offset: 0
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 3
+   srcRaw: "I2"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: "gv(0)"
+   offset: 0
+   swtch: "!L13"
+   curve: 
+      type: 0
+      value: "gv(3)"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 3
+   srcRaw: "ch(31)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 24
+   srcRaw: "I3"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 3
+      value: 6
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "Brake"
+ -
+   destCh: 24
+   srcRaw: "MAX"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: REPL
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "L25"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "BrkOff"
+ -
+   destCh: 25
+   srcRaw: "I4"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "SnpNeg"
+ -
+   destCh: 25
+   srcRaw: "I1"
+   carryTrim: 1
+   mixWarn: 0
+   mltpx: MUL
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 3
+      value: -4
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 26
+   srcRaw: "I4"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: "gv(5)"
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "SnpPos"
+ -
+   destCh: 26
+   srcRaw: "I1"
+   carryTrim: 1
+   mixWarn: 0
+   mltpx: MUL
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 3
+      value: 4
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 27
+   srcRaw: "I5"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 011001111
+   weight: 10
+   offset: -10
+   swtch: "NONE"
+   curve: 
+      type: 3
+      value: 6
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "Slider"
+ -
+   destCh: 27
+   srcRaw: "I4"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 27
+   srcRaw: "ch(25)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 0
+      value: 100
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 27
+   srcRaw: "ch(26)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 0
+      value: -100
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 28
+   srcRaw: "ch(24)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: "gv(1)"
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 3
+      value: 3
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "Flap"
+ -
+   destCh: 28
+   srcRaw: "MAX"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: "gv(1)"
+   offset: -100
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "Offset"
+ -
+   destCh: 28
+   srcRaw: "ch(27)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "!L13"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   destCh: 29
+   srcRaw: "I2"
+   carryTrim: 1
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: "gv(0)"
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 3
+      value: 5
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "AbsAil"
+ -
+   destCh: 30
+   srcRaw: "ch(28)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 100
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "DwnExc"
+ -
+   destCh: 30
+   srcRaw: "ch(29)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: -100
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 0
+      value: "gv(3)"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "AilDow"
+ -
+   destCh: 31
+   srcRaw: "ch(28)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "Flap"
+ -
+   destCh: 31
+   srcRaw: "ch(30)"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: ADD
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: -100
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 0
+      value: 100
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "BmpUp"
+ -
+   destCh: 31
+   srcRaw: "I6"
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: REPL
+   delayPrec: 0
+   speedPrec: 0
+   flightModes: 000000000
+   weight: 100
+   offset: 0
+   swtch: "L11"
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "Align"
+limitData: 
+   0:
+      min: 0
+      max: 0
+      ppmCenter: 0
+      offset: 0
+      symetrical: 0
+      revert: 0
+      curve: 0
+      name: "Rudd"
+   1:
+      min: 0
+      max: 0
+      ppmCenter: 0
+      offset: 0
+      symetrical: 0
+      revert: 0
+      curve: 0
+      name: "Elev"
+   2:
+      min: 0
+      max: 0
+      ppmCenter: 0
+      offset: 0
+      symetrical: 0
+      revert: 0
+      curve: 1
+      name: "Left"
+   3:
+      min: 0
+      max: 0
+      ppmCenter: 0
+      offset: 0
+      symetrical: 0
+      revert: 0
+      curve: 2
+      name: "Right"
+expoData: 
+ -
+   mode: 3
+   scale: 0
+   trimSource: 0
+   srcRaw: "Rud"
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   chn: 0
+   flightModes: 000000000
+   name: "Rudder"
+ -
+   mode: 3
+   scale: 0
+   trimSource: 0
+   srcRaw: "Ele"
+   weight: "gv(6)"
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 1
+      value: "gv(8)"
+   chn: 1
+   flightModes: 000000000
+   name: "Elevat"
+ -
+   mode: 3
+   scale: 0
+   trimSource: 0
+   srcRaw: "Ail"
+   weight: "gv(7)"
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 1
+      value: "gv(8)"
+   chn: 2
+   flightModes: 000000000
+   name: "Ailero"
+ -
+   mode: 3
+   scale: 0
+   trimSource: 1
+   srcRaw: "Thr"
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   chn: 3
+   flightModes: 000000000
+   name: "Brake"
+ -
+   mode: 3
+   scale: 0
+   trimSource: 1
+   srcRaw: "T3"
+   weight: 50
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 0
+      value: -100
+   chn: 4
+   flightModes: 000000000
+   name: "CambPs"
+ -
+   mode: 3
+   scale: 0
+   trimSource: 1
+   srcRaw: "MAX"
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   chn: 5
+   flightModes: 000000000
+   name: "Camber"
+ -
+   mode: 3
+   scale: 0
+   trimSource: 1
+   srcRaw: "Thr"
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   curve: 
+      type: 3
+      value: 7
+   chn: 6
+   flightModes: 000000000
+   name: "Align"
+ -
+   mode: 3
+   scale: 0
+   trimSource: 1
+   srcRaw: "P1"
+   weight: 100
+   offset: 0
+   swtch: "NONE"
+   chn: 7
+   flightModes: 000000000
+   name: "Dial"
+curves: 
+   0:
+      type: 0
+      smooth: 1
+      points: 0
+      name: "Lft"
+   1:
+      type: 0
+      smooth: 1
+      points: 0
+      name: "Rgt"
+   2:
+      type: 0
+      smooth: 0
+      points: -2
+      name: "BrF"
+   3:
+      type: 1
+      smooth: 0
+      points: -1
+      name: "Snp"
+   4:
+      type: 0
+      smooth: 0
+      points: -2
+      name: "Abs"
+   5:
+      type: 1
+      smooth: 0
+      points: -2
+      name: "DB"
+   6:
+      type: 1
+      smooth: 0
+      points: 5
+      name: "Aln"
+   31:
+      type: 0
+      smooth: 0
+      points: 0
+      name: "Mem"
+points: 
+   0:
+      val: -100
+   1:
+      val: -50
+   3:
+      val: 50
+   4:
+      val: 100
+   5:
+      val: -100
+   6:
+      val: -50
+   8:
+      val: 50
+   9:
+      val: 100
+   10:
+      val: -100
+   11:
+      val: 50
+   12:
+      val: 100
+   13:
+      val: -100
+   14:
+      val: -100
+   17:
+      val: -50
+   19:
+      val: 100
+   21:
+      val: 100
+   22:
+      val: -100
+   23:
+      val: 100
+   24:
+      val: 100
+   25:
+      val: 90
+   26:
+      val: -100
+   27:
+      val: -100
+   28:
+      val: -50
+   29:
+      val: -50
+   32:
+      val: 50
+   33:
+      val: 50
+   34:
+      val: 100
+   35:
+      val: 100
+   36:
+      val: -75
+   37:
+      val: -75
+   38:
+      val: -25
+   39:
+      val: -25
+   40:
+      val: 25
+   41:
+      val: 25
+   42:
+      val: 75
+   43:
+      val: 75
+logicalSw: 
+   0:
+      func: FUNC_AND
+      def: "!SA1,NONE"
+      andsw: "L16"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   1:
+      func: FUNC_AND
+      def: "SA2,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   2:
+      func: FUNC_AND
+      def: "SB0,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   3:
+      func: FUNC_AND
+      def: "SB2,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   4:
+      func: FUNC_AND
+      def: "SD0,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   5:
+      func: FUNC_AND
+      def: "SD2,NONE"
+      andsw: "L1"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   6:
+      func: FUNC_OR
+      def: "SF2,L9"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   7:
+      func: FUNC_AND
+      def: "SH2,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   8:
+      func: FUNC_AND
+      def: "L7,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 3
+   10:
+      func: FUNC_STICKY
+      def: "L11,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   11:
+      func: FUNC_STICKY
+      def: "L12,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   12:
+      func: FUNC_OR
+      def: "L11,L12"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   14:
+      func: FUNC_STICKY
+      def: "L15,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   15:
+      func: FUNC_STICKY
+      def: "L16,NONE"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   17:
+      func: FUNC_ADIFFEGREATER
+      def: "Ail,6"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   18:
+      func: FUNC_ADIFFEGREATER
+      def: "Ele,6"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   19:
+      func: FUNC_OR
+      def: "L18,L19"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   20:
+      func: FUNC_STICKY
+      def: "FM1,L20"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   22:
+      func: FUNC_VPOS
+      def: "I3,90"
+      andsw: "!FM1"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   23:
+      func: FUNC_STICKY
+      def: "FM1,L23"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   24:
+      func: FUNC_OR
+      def: "L24,L13"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   25:
+      func: FUNC_AND
+      def: "!FM1,L24"
+      andsw: "!L23"
+      lsPersist: 0
+      lsState: 0
+      delay: 30
+      duration: 0
+   27:
+      func: FUNC_OR
+      def: "FM1,FM2"
+      andsw: "NONE"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   28:
+      func: FUNC_AND
+      def: "L28,L16"
+      andsw: "L8"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+   29:
+      func: FUNC_AND
+      def: "!L29,L16"
+      andsw: "L8"
+      lsPersist: 0
+      lsState: 0
+      delay: 0
+      duration: 0
+customFn: 
+   0:
+      swtch: "L2"
+      func: VARIO
+      def: "0"
+   1:
+      swtch: "L5"
+      func: PLAY_VALUE
+      def: "Tmr2,1,10"
+   2:
+      swtch: "L26"
+      func: PLAY_TRACK
+      def: "flapup,1,5"
+   3:
+      swtch: "L29"
+      func: LOGS
+      def: "10,1"
+   4:
+      swtch: "L30"
+      func: LOGS
+      def: "100,1"
+flightModeData: 
+   0:
+      trim: 
+         2:
+            value: -20
+            mode: 0
+      name: "Cruise"
+      swtch: "NONE"
+      fadeIn: 0
+      fadeOut: 0
+      gvars: 
+         0:
+            val: 66
+         1:
+            val: 67
+         2:
+            val: 10
+         3:
+            val: 0
+         4:
+            val: 12
+         5:
+            val: 25
+         6:
+            val: 100
+         7:
+            val: 100
+         8:
+            val: 50
+         9:
+            val: 0
+         10:
+            val: 0
+         11:
+            val: 0
+         12:
+            val: 0
+         13:
+            val: 0
+         14:
+            val: 0
+   1:
+      trim: 
+         0:
+            value: 0
+            mode: 1
+         1:
+            value: -60
+            mode: 2
+         2:
+            value: 0
+            mode: 2
+         3:
+            value: 0
+            mode: 1
+      name: "Launch"
+      swtch: "L7"
+      fadeIn: 0
+      fadeOut: 0
+   2:
+      trim: 
+         0:
+            value: 0
+            mode: 1
+         1:
+            value: 0
+            mode: 1
+         2:
+            value: 0
+            mode: 31
+         3:
+            value: 0
+            mode: 1
+      name: "Zoom"
+      swtch: "L21"
+      fadeIn: 0
+      fadeOut: 0
+   3:
+      trim: 
+         1:
+            value: 0
+            mode: 1
+         2:
+            value: 0
+            mode: 31
+      name: "Speed"
+      swtch: "L3"
+      fadeIn: 0
+      fadeOut: 0
+      gvars: 
+         6:
+            val: 100
+         7:
+            val: 100
+         8:
+            val: 50
+   4:
+      trim: 
+         1:
+            value: 0
+            mode: 1
+         2:
+            value: -40
+            mode: 8
+      name: "Float"
+      swtch: "L4"
+      fadeIn: 0
+      fadeOut: 0
+      gvars: 
+         6:
+            val: 100
+         7:
+            val: 100
+         8:
+            val: 50
+thrTraceSrc: Thr
+gvars: 
+   0:
+      name: "Ail"
+      min: 0
+      max: 0
+      popup: 0
+      prec: 0
+      unit: 0
+   1:
+      name: "Brk"
+      min: 0
+      max: 0
+      popup: 0
+      prec: 0
+      unit: 0
+   2:
+      name: "AiR"
+      min: 0
+      max: 0
+      popup: 0
+      prec: 0
+      unit: 0
+   3:
+      name: "Dif"
+      min: 0
+      max: 0
+      popup: 0
+      prec: 0
+      unit: 0
+   4:
+      name: "BkE"
+      min: 0
+      max: 0
+      popup: 0
+      prec: 0
+      unit: 0
+   5:
+      name: "Snp"
+      min: 0
+      max: 0
+      popup: 0
+      prec: 0
+      unit: 0
+   6:
+      name: "Ele"
+      min: 0
+      max: 0
+      popup: 0
+      prec: 0
+      unit: 0
+   7:
+      name: "Ail"
+      min: 0
+      max: 0
+      popup: 0
+      prec: 0
+      unit: 0
+   8:
+      name: "Exp"
+      min: 0
+      max: 0
+      popup: 0
+      prec: 0
+      unit: 0
+varioData: 
+   source: 6
+   centerSilent: 0
+   centerMax: 0
+   centerMin: 0
+   min: 0
+   max: 0
+rssiSource: none
+rfAlarms: 
+   warning: 45
+   critical: 42
+thrTrimSw: 0
+potsWarnMode: WARN_OFF
+jitterFilter: GLOBAL
+failsafeChannels: 
+   4:
+      val: 1024
+   5:
+      val: -1024
+   6:
+      val: -1024
+trainerData: 
+   mode: MASTER_TRAINER_JACK
+   channelsStart: 0
+   channelsCount: -8
+   frameLength: 0
+   delay: 0
+   pulsePol: 0
+inputNames: 
+   0:
+      val: "Rudd"
+   1:
+      val: "Elev"
+   2:
+      val: "Aile"
+   3:
+      val: "Brk"
+   4:
+      val: "CbPS"
+   5:
+      val: "Cmb"
+   6:
+      val: "Aln"
+   7:
+      val: "Pokr"
+potsWarnEnabled: 0
+screenData: 
+   0:
+      LayoutId: Layout1x1
+      layoutData: 
+         zones: 
+            0:
+               widgetName: SoarETX
+               widgetData: 
+                  options: 
+                     0:
+                        type: Signed
+                        value: 
+                           signedValue: 1
+                     1:
+                        type: String
+                        value: 
+                           stringValue: f3k
+                     2:
+                        type: String
+                        value: 
+                           stringValue: 
+         options: 
+            0:
+               type: Bool
+               value: 
+                  boolValue: 1
+            1:
+               type: Bool
+               value: 
+                  boolValue: 1
+            2:
+               type: Bool
+               value: 
+                  boolValue: 0
+            3:
+               type: Bool
+               value: 
+                  boolValue: 1
+            4:
+               type: Bool
+               value: 
+                  boolValue: 0
+   1:
+      LayoutId: Layout2x3
+      layoutData: 
+         zones: 
+            0:
+               widgetName: SoarETX
+               widgetData: 
+                  options: 
+                     0:
+                        type: Signed
+                        value: 
+                           signedValue: 1
+                     1:
+                        type: String
+                        value: 
+                           stringValue: outputs
+                     2:
+                        type: String
+                        value: 
+                           stringValue: 
+            1:
+               widgetName: SoarETX
+               widgetData: 
+                  options: 
+                     0:
+                        type: Signed
+                        value: 
+                           signedValue: 1
+                     1:
+                        type: String
+                        value: 
+                           stringValue: wing2
+                     2:
+                        type: String
+                        value: 
+                           stringValue: 
+            2:
+               widgetName: SoarETX
+               widgetData: 
+                  options: 
+                     0:
+                        type: Signed
+                        value: 
+                           signedValue: 1
+                     1:
+                        type: String
+                        value: 
+                           stringValue: f3k_mix
+                     2:
+                        type: String
+                        value: 
+                           stringValue: 
+            3:
+               widgetName: SoarETX
+               widgetData: 
+                  options: 
+                     0:
+                        type: Signed
+                        value: 
+                           signedValue: 1
+                     1:
+                        type: String
+                        value: 
+                           stringValue: f3k_ctr
+                     2:
+                        type: String
+                        value: 
+                           stringValue: 
+            4:
+               widgetName: SoarETX
+               widgetData: 
+                  options: 
+                     0:
+                        type: Signed
+                        value: 
+                           signedValue: 1
+                     1:
+                        type: String
+                        value: 
+                           stringValue: graph
+                     2:
+                        type: String
+                        value: 
+                           stringValue: 
+            5:
+               widgetName: SoarETX
+               widgetData: 
+                  options: 
+                     0:
+                        type: Signed
+                        value: 
+                           signedValue: 1
+                     1:
+                        type: String
+                        value: 
+                           stringValue: f3k_sw
+                     2:
+                        type: String
+                        value: 
+                           stringValue: 
+         options: 
+            0:
+               type: Bool
+               value: 
+                  boolValue: 1
+            1:
+               type: Bool
+               value: 
+                  boolValue: 1
+            2:
+               type: Bool
+               value: 
+                  boolValue: 0
+            3:
+               type: Bool
+               value: 
+                  boolValue: 1
+            4:
+               type: Bool
+               value: 
+                  boolValue: 0
+topbarData: 
+   zones: 
+      0:
+         widgetName: SoarETX
+         widgetData: 
+            options: 
+               0:
+                  type: Signed
+                  value: 
+                     signedValue: 1
+               1:
+                  type: String
+                  value: 
+                     stringValue: name
+               2:
+                  type: String
+                  value: 
+                     stringValue: 
+      3:
+         widgetName: SoarETX
+         widgetData: 
+            options: 
+               0:
+                  type: Signed
+                  value: 
+                     signedValue: 1
+               1:
+                  type: String
+                  value: 
+                     stringValue: battery
+               2:
+                  type: String
+                  value: 
+                     stringValue: 
+      5:
+         widgetName: Radio Info
+         widgetData: 
+            options: 
+               0:
+                  type: Color
+                  value: 
+                     color: 0xF04030
+               1:
+                  type: Color
+                  value: 
+                     color: 0xF8C000
+               2:
+                  type: Color
+                  value: 
+                     color: 0x48AC50
+      6:
+         widgetName: Date Time
+         widgetData: 
+            options: 
+               0:
+                  type: Color
+                  value: 
+                     color: COLIDX1
+topbarWidgetWidth: 
+   0:
+      val: 1
+   1:
+      val: 1
+   2:
+      val: 1
+   3:
+      val: 1
+   4:
+      val: 1
+   5:
+      val: 1
+   6:
+      val: 1
+view: 1
+modelRegistrationID: ""
+customSwitches: 
+   SW1:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_ON
+      state: 1
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW2:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW3:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW4:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW5:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+   SW6:
+      name: ""
+      type: 2POS
+      group: 1
+      start: START_OFF
+      state: 0
+      onColorLuaOverride: OFF
+      offColorLuaOverride: OFF
+      onColor: 
+         r: 255
+         g: 255
+         b: 255
+      offColor: 
+         r: 0
+         g: 0
+         b: 0
+cfsGroupOn: 
+   1:
+      v: 1
+   2:
+      v: 0
+   3:
+      v: 0
+usbJoystickExtMode: 0
+usbJoystickIfMode: JOYSTICK
+usbJoystickCircularCut: 0
+radioThemesDisabled: GLOBAL
+radioGFDisabled: GLOBAL
+radioTrainerDisabled: GLOBAL
+modelHeliDisabled: GLOBAL
+modelFMDisabled: GLOBAL
+modelCurvesDisabled: GLOBAL
+modelGVDisabled: GLOBAL
+modelLSDisabled: GLOBAL
+modelSFDisabled: GLOBAL
+modelCustomScriptsDisabled: GLOBAL
+modelTelemetryDisabled: GLOBAL

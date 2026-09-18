@@ -1,0 +1,26 @@
+Labels:
+  "Favorites":
+  "RADIOMASTER":
+Sort: 1
+Models:
+  model1.yml:
+    hash: "26600000325d028f"
+    name: "Sir Quadsalot"
+    mod0type: 5
+    labels: "Favorites,RADIOMASTER"
+    bitmap: "X220.png"
+    lastopen: 1779005608
+  model2.yml:
+    hash: "bc7100008b5bfd79"
+    name: "F3K"
+    labels: ""
+    bitmap: ""
+    lastopen: 1765466137
+  model3.yml:
+    hash: "df5e0000b05c094f"
+    name: "Bigguns"
+    mod0type: 5
+    labels: "Favorites,RADIOMASTER"
+    bitmap: "F450.png"
+    lastopen: 1778917098
+

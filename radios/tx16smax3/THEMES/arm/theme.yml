@@ -1,0 +1,19 @@
+---
+summary: 
+   name: "arm"
+   author: ""
+   info: ""
+colors: 
+   PRIMARY1: 0x000000
+   PRIMARY2: 0xF8FCF8
+   PRIMARY3: 0x580808
+   SECONDARY1: 0x901010
+   SECONDARY2: 0xE86C68
+   SECONDARY3: 0xF88C88
+   FOCUS: 0xF01010
+   EDIT: 0x900000
+   ACTIVE: 0xF0C000
+   WARNING: 0xE00000
+   DISABLED: 0x888C88
+   QM_BG: 0x983430
+   QM_FG: 0xF8FCF8
