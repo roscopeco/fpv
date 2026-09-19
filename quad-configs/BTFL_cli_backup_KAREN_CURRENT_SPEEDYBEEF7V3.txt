@@ -29,12 +29,38 @@ serial UART2 64 115200 57600 0 115200
 beacon RX_LOST
 
 # led
-led 0 0,0::C:2
-led 1 1,0::C:5
-led 2 2,0::C:3
-led 3 3,0::C:12
-led 4 4,0::C:10
-led 5 5,0::C:11
+led 0 0,0::C:7
+led 1 1,0::C:7
+led 2 2,0::C:7
+led 3 3,0::C:7
+led 4 4,0::C:7
+led 5 5,0::C:7
+led 6 6,0::C:7
+led 7 7,0::C:7
+led 8 8,0::C:7
+led 9 9,0::C:7
+led 10 10,0::C:7
+led 11 11,0::C:7
+led 12 12,0::C:7
+led 13 13,0::C:7
+led 14 0,1::C:7
+led 15 1,1::C:7
+led 16 2,1::C:7
+led 17 3,1::C:7
+led 18 4,1::C:7
+led 19 5,1::C:7
+led 20 6,1::C:7
+led 21 7,1::C:7
+led 22 8,1::C:7
+led 23 9,1::C:7
+led 24 10,1::C:7
+led 25 11,1::C:7
+led 26 12,1::C:7
+led 27 13,1::C:7
+led 28 0,2::C:7
+led 29 1,2::C:7
+led 30 2,2::C:7
+led 31 3,2::C:7
 
 # aux
 aux 0 0 0 1950 2050 0 0
@@ -141,7 +167,7 @@ set f_yaw = 112
 set d_max_roll = 33
 set d_max_pitch = 41
 set thrust_linear = 30
-set dyn_idle_min_rpm = 30
+set dyn_idle_min_rpm = 22
 set simplified_master_multiplier = 110
 set simplified_i_gain = 85
 set simplified_pi_gain = 105
@@ -168,6 +194,20 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
+set rateprofile_name = Aggress
+set roll_rc_rate = 23
+set pitch_rc_rate = 23
+set yaw_rc_rate = 23
+set roll_expo = 70
+set pitch_expo = 70
+set yaw_expo = 70
+set roll_srate = 130
+set pitch_srate = 130
+set yaw_srate = 130
+
+rateprofile 1
+
+# rateprofile 1
 set rateprofile_name = F/style
 set roll_rc_rate = 10
 set pitch_rc_rate = 10
@@ -179,26 +219,15 @@ set roll_srate = 80
 set pitch_srate = 80
 set yaw_srate = 80
 
-rateprofile 1
-
-# rateprofile 1
-set rateprofile_name = Aggress
-set roll_rc_rate = 13
-set pitch_rc_rate = 13
-set yaw_rc_rate = 13
-set roll_expo = 70
-set pitch_expo = 70
-set yaw_expo = 70
-set roll_srate = 130
-set pitch_srate = 130
-set yaw_srate = 130
-
 rateprofile 2
 
 # rateprofile 2
 set rateprofile_name = Default
 
 rateprofile 3
+
+# rateprofile 3
+set rateprofile_name = Default
 
 battery_profile 0
 
@@ -207,7 +236,7 @@ battery_profile 1
 battery_profile 2
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # restore original battery_profile selection
 battery_profile 0

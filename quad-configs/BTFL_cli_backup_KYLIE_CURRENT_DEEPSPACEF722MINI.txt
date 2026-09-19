@@ -52,7 +52,7 @@ set gyro_lpf2_static_hz = 600
 set dyn_notch_count = 2
 set dyn_notch_q = 400
 set gyro_lpf1_dyn_min_hz = 0
-set acc_calibration = -26,-18,-10,1
+set acc_calibration = -14,2,-11,1
 set mag_hardware = NONE
 set blackbox_sample_rate = 1/2
 set dshot_bidir = ON
@@ -103,7 +103,7 @@ set d_max_roll = 32
 set d_max_pitch = 42
 set feedforward_smooth_factor = 50
 set feedforward_jitter_factor = 6
-set dyn_idle_min_rpm = 36
+set dyn_idle_min_rpm = 22
 set simplified_pids_mode = OFF
 set simplified_dterm_filter_multiplier = 110
 
@@ -120,9 +120,12 @@ rateprofile 0
 
 # rateprofile 0
 set rateprofile_name = Aggress
-set roll_expo = 50
-set pitch_expo = 50
-set yaw_expo = 50
+set roll_rc_rate = 23
+set pitch_rc_rate = 23
+set yaw_rc_rate = 23
+set roll_expo = 70
+set pitch_expo = 70
+set yaw_expo = 70
 set roll_srate = 130
 set pitch_srate = 130
 set yaw_srate = 130
@@ -131,9 +134,12 @@ rateprofile 1
 
 # rateprofile 1
 set rateprofile_name = F/Style
-set roll_expo = 50
-set pitch_expo = 50
-set yaw_expo = 50
+set roll_rc_rate = 10
+set pitch_rc_rate = 10
+set yaw_rc_rate = 10
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 55
 set roll_srate = 80
 set pitch_srate = 80
 set yaw_srate = 80
