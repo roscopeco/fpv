@@ -1,0 +1,197 @@
+
+# version
+# Betaflight / STM32F722 (F722) 2026.6.2 Oct  9 2026 / 19:13:52 (e0b7bb01b) MSP API: 1.48
+# config rev: 3a406c5
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name DAKEFPVF722
+manufacturer_id DAKE
+mcu_id 004100343135511335373434
+signature 
+
+# name: KENNETH
+
+# feature
+feature TELEMETRY
+feature OSD
+feature ESC_SENSOR
+
+# serial
+serial UART5 8192 115200 57600 0 115200
+
+# beeper
+beeper -ARMING_GPS_FIX
+beeper -GPS_STATUS
+beeper -READY_BEEP
+beeper -ON_USB
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1925 2075 0 0
+aux 1 1 1 1675 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 55 4 1900 2100 0 0
+aux 4 13 3 1450 1650 0 0
+aux 5 13 0 900 900 0 27
+aux 6 35 3 1950 2050 0 0
+aux 7 36 5 1950 2050 0 0
+
+# adjrange
+adjrange 0 0 2 900 1225 12 2 0 0
+adjrange 1 0 2 1375 1600 12 2 0 0
+adjrange 2 0 2 1950 2100 12 2 0 0
+adjrange 3 0 6 900 1050 29 6 0 0
+adjrange 4 0 6 1450 1550 29 6 0 0
+adjrange 5 0 6 1925 2100 29 6 0 0
+
+# vtxtable
+vtxtable bands 5
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
+vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
+vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665 5645 5885 5905 5925 5945
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable powerlevels 5
+vtxtable powervalues 25 100 200 400 600
+vtxtable powerlabels 25 100 200 400 600
+
+# vtx
+vtx 0 7 0 0 1 900 1100
+vtx 1 7 0 0 3 1400 1600
+vtx 2 7 0 0 5 1900 2100
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 600
+set dyn_notch_count = 2
+set dyn_notch_q = 400
+set dyn_notch_min_hz = 90
+set dyn_notch_max_hz = 400
+set gyro_lpf1_dyn_min_hz = 0
+set acc_calibration = -19,3,27,1
+set dshot_bidir = ON
+set yaw_motors_reversed = ON
+set simplified_gyro_filter_multiplier = 120
+set osd_units = BRITISH
+set osd_vbat_pos = 6552
+set osd_tim_1_pos = 6528
+set osd_tim_2_pos = 6528
+set osd_flymode_pos = 6144
+set osd_g_force_pos = 4154
+set osd_throttle_pos = 4480
+set osd_vtx_channel_pos = 2059
+set osd_ah_sbar_pos = 4335
+set osd_ah_pos = 4207
+set osd_current_pos = 4503
+set osd_craft_name_pos = 14733
+set osd_pidrate_profile_pos = 2107
+set osd_warnings_pos = 14634
+set osd_avg_cell_voltage_pos = 14744
+set osd_battery_usage_pos = 4489
+set osd_disarmed_pos = 14604
+set osd_flip_arrow_pos = 14603
+set osd_core_temp_pos = 6553
+set osd_rate_profile_name_pos = 6176
+set osd_pid_profile_name_pos = 64
+set osd_total_flights_pos = 6169
+set osd_sys_vtx_temp_pos = 407
+set debug_mode = CHIRP
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_low_power_disarm = UNTIL_FIRST_ARM
+set vtx_freq = 5658
+set rpm_filter_weights = 90,50,90
+set rpm_filter_q = 700
+set craft_name = KENNETH
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_static_hz = 0
+set dterm_lpf2_type = PT3
+set dterm_lpf2_static_hz = 120
+set anti_gravity_gain = 100
+set iterm_relax_cutoff = 10
+set p_pitch = 59
+set i_pitch = 90
+set d_pitch = 41
+set f_pitch = 128
+set p_roll = 51
+set i_roll = 78
+set d_roll = 33
+set f_roll = 112
+set p_yaw = 51
+set i_yaw = 78
+set f_yaw = 112
+set d_max_roll = 33
+set d_max_pitch = 41
+set thrust_linear = 30
+set dyn_idle_min_rpm = 22
+set simplified_master_multiplier = 110
+set simplified_i_gain = 85
+set simplified_pi_gain = 105
+set simplified_d_max_gain = 0
+set simplified_feedforward_gain = 85
+set simplified_pitch_d_gain = 110
+set simplified_pitch_pi_gain = 110
+set simplified_dterm_filter_multiplier = 80
+set tpa_mode = PD
+set tpa_rate = 50
+set tpa_breakpoint = 1250
+set tpa_low_breakpoint = 1100
+set tpa_low_always = ON
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set rateprofile_name = F/Style
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 55
+set roll_srate = 80
+set pitch_srate = 80
+set yaw_srate = 80
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+battery_profile 0
+
+battery_profile 1
+
+battery_profile 2
+
+# restore original rateprofile selection
+rateprofile 0
+
+# restore original battery_profile selection
+battery_profile 0
+
+# save configuration
+save
