@@ -1,7 +1,7 @@
 
 # version
-# Betaflight / STM32G47X (SG47) 4.5.0 May 16 2024 / 01:17:04 (c155f5830) MSP API: 1.46
-# config rev: 93dfc69
+# Betaflight / STM32G474 (G474) 2026.6.2 Sep 17 2026 / 08:18:53 (e0b7bb01b) MSP API: 1.48
+# config rev: 3a406c5
 
 # start the command batch
 batch start
@@ -27,7 +27,7 @@ beacon RX_SET
 aux 0 0 0 1700 2100 0 0
 aux 1 1 1 1825 2100 0 0
 aux 2 2 1 1300 1700 0 0
-aux 3 13 3 1700 2100 0 0
+aux 3 13 3 1300 1700 0 0
 aux 4 35 3 1700 2100 0 0
 
 # adjrange
@@ -55,14 +55,12 @@ set dyn_notch_q = 500
 set dyn_notch_min_hz = 120
 set dyn_notch_max_hz = 500
 set gyro_lpf1_dyn_min_hz = 0
-set acc_calibration = -44,-10,-41,1
+set acc_calibration = -113,14,-12,1
 set baro_hardware = NONE
 set dshot_bidir = ON
 set dshot_bitbang = AUTO
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
-set vbat_max_cell_voltage = 440
-set vbat_warning_cell_voltage = 345
 set vbat_scale = 111
 set ibata_offset = -600
 set yaw_motors_reversed = ON
@@ -79,7 +77,7 @@ set osd_remaining_time_estimate_pos = 33
 set osd_flymode_pos = 6518
 set osd_throttle_pos = 6486
 set osd_vtx_channel_pos = 2081
-set osd_crosshairs_pos = 14604
+set osd_crosshairs_pos = 14605
 set osd_ah_sbar_pos = 4365
 set osd_ah_pos = 4237
 set osd_current_pos = 6496
@@ -92,19 +90,15 @@ set osd_avg_cell_voltage_pos = 4481
 set osd_pit_ang_pos = 97
 set osd_rol_ang_pos = 65
 set osd_battery_usage_pos = 8584
-set osd_disarmed_pos = 6377
+set osd_disarmed_pos = 6379
 set osd_esc_tmp_pos = 163
 set osd_esc_rpm_pos = 150
 set osd_core_temp_pos = 278
-set osd_displayport_device = AUTO
-set osd_canvas_width = 30
-set osd_canvas_height = 13
-set debug_mode = GYRO_SCALED
+set osd_rate_profile_name_pos = 2113
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
 set vtx_freq = 5658
-set vcd_video_system = AUTO
 set craft_name = AIR65
 
 profile 0
@@ -124,17 +118,15 @@ set p_yaw = 67
 set i_yaw = 119
 set f_yaw = 0
 set angle_p_gain = 100
-set d_min_roll = 44
-set d_min_pitch = 50
+set d_max_roll = 0
+set d_max_pitch = 0
 set d_max_gain = 20
 set auto_profile_cell_count = 1
-set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 65
 set feedforward_jitter_factor = 5
+set simplified_pids_mode = OFF
 set simplified_master_multiplier = 130
 set simplified_d_gain = 115
 set simplified_pi_gain = 115
-set simplified_dmax_gain = 0
 set simplified_feedforward_gain = 0
 set simplified_pitch_pi_gain = 110
 set tpa_mode = PD
@@ -152,41 +144,57 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
+set rateprofile_name = Aggress
 set thr_expo = 60
-set throttle_limit_type = SCALE
-set throttle_limit_percent = 80
+set roll_rc_rate = 23
+set pitch_rc_rate = 23
+set yaw_rc_rate = 23
+set roll_expo = 70
+set pitch_expo = 70
+set yaw_expo = 70
+set roll_srate = 130
+set pitch_srate = 130
+set yaw_srate = 130
 
 rateprofile 1
 
 # rateprofile 1
-set roll_rc_rate = 15
-set pitch_rc_rate = 15
-set yaw_rc_rate = 15
+set rateprofile_name = F/Style
+set roll_rc_rate = 10
+set pitch_rc_rate = 10
+set yaw_rc_rate = 10
+set roll_expo = 55
+set pitch_expo = 55
+set yaw_expo = 55
 set roll_srate = 80
 set pitch_srate = 80
 set yaw_srate = 80
-set throttle_limit_type = SCALE
-set throttle_limit_percent = 80
 
 rateprofile 2
 
 # rateprofile 2
-set roll_rc_rate = 20
-set pitch_rc_rate = 20
-set yaw_rc_rate = 20
-set roll_expo = 20
-set pitch_expo = 20
-set yaw_expo = 20
-set roll_srate = 120
-set pitch_srate = 120
-set yaw_srate = 120
-set throttle_limit_type = SCALE
-set throttle_limit_percent = 80
+set rateprofile_name = Default
 
 rateprofile 3
 
+# rateprofile 3
+set rateprofile_name = Default
+
+battery_profile 0
+
+# battery_profile 0
+set vbat_max_cell_voltage = 440
+set vbat_warning_cell_voltage = 345
+
+battery_profile 1
+
+battery_profile 2
+
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 2
+
+# restore original battery_profile selection
+battery_profile 0
 
 # save configuration
 save
