@@ -97,7 +97,7 @@ set osd_core_temp_pos = 278
 set osd_rate_profile_name_pos = 2113
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 2
+set vtx_power = 1
 set vtx_freq = 5658
 set craft_name = AIR65
 
@@ -106,17 +106,15 @@ profile 0
 # profile 0
 set profile_name = HQ 31mm
 set vbat_sag_compensation = 100
-set p_pitch = 77
-set i_pitch = 138
-set d_pitch = 50
-set f_pitch = 0
-set p_roll = 67
-set i_roll = 119
-set d_roll = 44
-set f_roll = 0
-set p_yaw = 67
-set i_yaw = 119
-set f_yaw = 0
+set p_pitch = 42
+set i_pitch = 72
+set d_pitch = 27
+set f_pitch = 120
+set p_roll = 40
+set i_roll = 70
+set d_roll = 25
+set i_yaw = 70
+set f_yaw = 100
 set angle_p_gain = 100
 set d_max_roll = 0
 set d_max_pitch = 0

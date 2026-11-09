@@ -1,7 +1,7 @@
 
 # version
-# Betaflight / STM32G47X (G473) 2026.6.0-alpha May 15 2026 / 06:14:55 (e92c10887) MSP API: 1.48
-# config rev: 6703db5
+# Betaflight / STM32G474 (G474) 2026.6.2 Sep 17 2026 / 00:27:39 (e0b7bb01b) MSP API: 1.48
+# config rev: 3a406c5
 
 # start the command batch
 batch start
