@@ -19,7 +19,6 @@ signature
 # feature
 feature TELEMETRY
 feature OSD
-feature ESC_SENSOR
 
 # serial
 serial UART5 8192 115200 57600 0 115200
@@ -71,19 +70,21 @@ vtx 2 7 0 0 5 1900 2100
 
 # master
 set gyro_lpf1_static_hz = 0
-set gyro_lpf2_static_hz = 600
-set dyn_notch_count = 2
+set gyro_lpf2_static_hz = 750
+set dyn_notch_count = 1
 set dyn_notch_q = 400
 set dyn_notch_min_hz = 90
 set dyn_notch_max_hz = 400
 set gyro_lpf1_dyn_min_hz = 0
-set acc_calibration = -19,3,27,1
+set acc_calibration = 14,5,-18,1
 set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
 set yaw_motors_reversed = ON
-set simplified_gyro_filter_multiplier = 120
+set pid_process_denom = 2
+set simplified_gyro_filter_multiplier = 150
 set osd_units = BRITISH
-set osd_vbat_pos = 6552
-set osd_tim_1_pos = 6528
+set osd_vbat_pos = 6520
+set osd_tim_1_pos = 6496
 set osd_tim_2_pos = 6528
 set osd_flymode_pos = 6144
 set osd_g_force_pos = 4154
@@ -92,10 +93,10 @@ set osd_vtx_channel_pos = 2059
 set osd_ah_sbar_pos = 4335
 set osd_ah_pos = 4207
 set osd_current_pos = 4503
-set osd_craft_name_pos = 14733
+set osd_craft_name_pos = 14731
 set osd_pidrate_profile_pos = 2107
 set osd_warnings_pos = 14634
-set osd_avg_cell_voltage_pos = 14744
+set osd_avg_cell_voltage_pos = 14680
 set osd_battery_usage_pos = 4489
 set osd_disarmed_pos = 14604
 set osd_flip_arrow_pos = 14603
@@ -107,11 +108,13 @@ set osd_sys_vtx_temp_pos = 407
 set debug_mode = CHIRP
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 3
 set vtx_low_power_disarm = UNTIL_FIRST_ARM
 set vtx_freq = 5658
-set rpm_filter_weights = 90,50,90
-set rpm_filter_q = 700
+set vcd_video_system = PAL
+set rpm_filter_weights = 90,30,90
+set rpm_filter_q = 800
+set rpm_filter_fade_range_hz = 100
 set craft_name = KENNETH
 
 profile 0
@@ -164,6 +167,20 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
+set rateprofile_name = Aggress
+set roll_rc_rate = 23
+set pitch_rc_rate = 23
+set yaw_rc_rate = 23
+set roll_expo = 70
+set pitch_expo = 70
+set yaw_expo = 70
+set roll_srate = 130
+set pitch_srate = 130
+set yaw_srate = 130
+
+rateprofile 1
+
+# rateprofile 1
 set rateprofile_name = F/Style
 set roll_rc_rate = 15
 set pitch_rc_rate = 15
@@ -175,9 +192,10 @@ set roll_srate = 80
 set pitch_srate = 80
 set yaw_srate = 80
 
-rateprofile 1
-
 rateprofile 2
+
+# rateprofile 2
+set rateprofile_name = Default
 
 rateprofile 3
 
@@ -188,7 +206,7 @@ battery_profile 1
 battery_profile 2
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # restore original battery_profile selection
 battery_profile 0
