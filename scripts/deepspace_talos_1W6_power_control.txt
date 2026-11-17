@@ -1,0 +1,4 @@
+# TX16S VTX power on buttons, 25/800/1W6
+vtx 0 7 0 0 1 900 1100
+vtx 1 7 0 0 4 1400 1600
+vtx 2 7 0 0 5 1900 2100
